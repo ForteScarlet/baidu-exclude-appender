@@ -1,0 +1,20 @@
+{
+  "name": "Baidu Search Appender",
+  "description": "向百度搜索尾部追加额外固定参数",
+  "version": "0.1",
+  "manifest_version": 3,
+  "author": "ForteScarlet",
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": ["storage"],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_scripts/search.js", "search.js"]
+    }
+  ]
+
+}
