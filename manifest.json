@@ -11,7 +11,11 @@
   "permissions": [
     "storage",
     "webRequest",
-    "webRequestBlocking",
+    "tabs",
+    "webRequestBlocking"
+  ],
+
+  "host_permissions": [
     "*://*.baidu.com/s"
   ],
 
