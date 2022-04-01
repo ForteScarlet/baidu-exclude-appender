@@ -8,9 +8,14 @@
     "service_worker": "background.js"
   },
 
-  "permissions": ["storage"],
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.baidu.com/s"
+  ],
 
-  "content_scripts": [
+  "_content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content_scripts/search.js", "search.js"]
