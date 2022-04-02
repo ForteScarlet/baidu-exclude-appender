@@ -19,10 +19,10 @@
     "*://*.baidu.com/s"
   ],
 
-  "_content_scripts": [
+  "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content_scripts/search.js", "search.js"]
+      "matches": ["*://*.baidu.com/s*"],
+      "js": ["content_scripts/search.js"]
     }
   ]
 
