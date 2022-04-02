@@ -10,16 +10,15 @@ function resetSearch(search, attributes) {
     }
 
 
-    const splits = search.split(/ +/).reverse()
-
+    const splits = search.trim().split(/ +/).map(it => it.trim()).filter(it => it.length > 0).reverse()
     let isInSearchValue = false
     let searchValue = ''
     for (const splitValue of splits) {
         if (isInSearchValue) {
-            searchValue += ' ' + splitValue
+            searchValue += ' ' + splitValue.trim()
         } else {
             if (!splitValue.startsWith('-')) {
-                searchValue = splitValue
+                searchValue = splitValue.trim()
                 isInSearchValue = true
             } else {
                 // find attribute

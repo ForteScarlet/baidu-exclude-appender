@@ -5,24 +5,27 @@
   "manifest_version": 3,
   "author": "ForteScarlet",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
   },
 
   "permissions": [
-    "storage",
-    "webRequest",
-    "tabs",
-    "webRequestBlocking"
+    "storage"
   ],
 
   "host_permissions": [
-    "*://*.baidu.com/s"
+    "*://*.baidu.com/s*"
   ],
+
+  "options_ui": {
+    "page": "options/index.html"
+  },
+
+  "content_security_policy": "style-src 'self' 'unsafe-inline';script-src 'self' 'unsafe-eval' https://cdn.bootcss.com; object-src 'self' ;",
 
   "content_scripts": [
     {
       "matches": ["*://*.baidu.com/s*"],
-      "js": ["content_scripts/search.js"]
+      "js": ["content_scripts/resetSearch.js", "content_scripts/search.js"]
     }
   ]
 

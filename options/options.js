@@ -5,7 +5,8 @@ const Counter = {
                 id: 'csbn', enable: true
             }, {
                 id: 'dilibili', enable: false
-            }]
+            }],
+            searchViewValue: '今晚吃什么'
         }
     }, methods: {
         addExclude(newExclude) {
@@ -24,7 +25,7 @@ const Counter = {
         }
     }, computed: {
         searchView() {
-            let value = "今晚吃 -c 什么 -a -b"
+            let value = this.searchViewValue
             const needExcludes = this.excludes
                 .filter((it) => {
                     return it.enable
@@ -32,13 +33,6 @@ const Counter = {
                 .map((it) => {
                     return it.id
                 })
-            // if (this.excludes) {
-            //     for (let exclude of this.excludes) {
-            //         if (exclude.enable) {
-            //             value += ' -' + exclude.id
-            //         }
-            //     }
-            // }
             return resetSearch(value, needExcludes)
         }
     }, watch: {

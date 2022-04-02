@@ -17,23 +17,6 @@
 <body>
 Hello
 <div id="counter" class="container">
-    <div class="page-header">
-        <h1>说明</h1>
-    </div>
-
-    <div class="row">
-        <ul>
-            <li>额外拼接的属性会拼接于输入内容的 <strong>结尾处</strong>。</li>
-            <li>当出现重复的排除参数时，不会重复添加。例如你的查询内容为 <code>红烧肉 -foo</code>，则不会在结尾处重复拼接 <code>-foo</code>。 </li>
-            <li>
-                <p><strong>不会</strong> 检测查询内容的 <strong>非结尾处</strong> 参数。</p>
-                <p>
-                    例如如果你的查询内容为 <code>红烧肉 -foo 炸鸡块</code>，
-                    则会导致在结尾处拼接一个重复的 <code>-foo</code>，变成 <code>红烧肉 -foo 炸鸡块 -foo</code>。
-                </p>
-            </li>
-        </ul>
-    </div>
 
     <div class="page-header">
         <h1>配置</h1>
@@ -81,8 +64,13 @@ Hello
 
 
 <!--<script src="vue.js"></script>-->
-<script src="https://unpkg.com/vue@3.2.31"></script>
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<!--<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>-->
+<!--<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>-->
+
 <script src="../content_scripts/resetSearch.js"></script>
-<script src="options.js"></script>
+<script src="options.js" type="text/babel"></script>
 </body>
 </html>
