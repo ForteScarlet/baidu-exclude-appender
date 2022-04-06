@@ -1,11 +1,11 @@
 {
   "name": "Baidu Search Appender",
-  "description": "向百度搜索尾部追加额外固定参数",
-  "version": "0.1",
+  "description": "向百度搜索尾部追加额外的排除参数",
+  "version": "0.0.1",
   "manifest_version": 3,
   "author": "ForteScarlet",
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "background.js"
   },
 
   "permissions": [
@@ -16,11 +16,13 @@
     "*://*.baidu.com/s*"
   ],
 
-  "options_ui": {
-    "page": "options/index.html"
+  "options_page": "options/index.html",
+
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self';"
   },
 
-  "content_security_policy": "style-src 'self' 'unsafe-inline';script-src 'self' 'unsafe-eval' https://cdn.bootcss.com; object-src 'self' ;",
 
   "content_scripts": [
     {

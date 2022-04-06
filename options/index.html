@@ -2,7 +2,6 @@
 <html lang="zh_CN" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title data-locale="option_title">设置</title>
     <!-- @see https://v3.bootcss.com/getting-started/ -->
     <link rel="stylesheet" href="bootstrap.css">
@@ -15,7 +14,6 @@
     </style>
 </head>
 <body>
-Hello
 <div id="counter" class="container">
     <div class="page-header">
         <h1>说明</h1>
@@ -42,13 +40,22 @@ Hello
     <div class="row">
         <div class="input-group">
             <span class="input-group-addon">搜索预览：</span>
-            <input type="text" class="form-control" placeholder="View" v-model="searchViewValue">
-            <input type="text" class="form-control" placeholder="View" :value="searchView" readonly>
+            <input id="searchViewValue" type="text" class="form-control" placeholder="View">
+            <input id="searchView" type="text" class="form-control" placeholder="View" readonly>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-inline">
+            <div class="form-group">
+                <input id="add-value" class="form-control" placeholder="添加排除值">
+            </div>
+            <button id="add-btn" class="btn btn-primary">添加</button>
         </div>
     </div>
     <div class="row" style="padding-top: 40px"></div>
     <div class="row">
-        <table class="table table-hover">
+        <table class="table table-hover" id="excludeTable">
             <thead>
             <tr>
                 <th>#</th>
@@ -57,7 +64,7 @@ Hello
                 <th>操作</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="excludeTableBody">
             <tr v-for="(exclude, i) in excludes"
                 :class="exclude.enable ? 'success' : 'danger'"
             >
@@ -80,8 +87,6 @@ Hello
 </div>
 
 
-<!--<script src="vue.js"></script>-->
-<script src="https://unpkg.com/vue@3.2.31"></script>
 <script src="../content_scripts/resetSearch.js"></script>
 <script src="options.js"></script>
 </body>

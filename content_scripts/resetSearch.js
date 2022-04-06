@@ -1,8 +1,11 @@
 function resetSearch(search, attributes) {
-    if (attributes.length === 0) {
+    if (!attributes || !search) {
         return search
     }
 
+    if (search.length === 0 || attributes.length === 0) {
+        return search
+    }
 
     const needAppendAttributes = {}
     for (const attribute of attributes) {
