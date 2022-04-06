@@ -1,7 +1,7 @@
 {
   "name": "Baidu Exclude Appender",
   "description": "向百度搜索尾部追加额外的排除参数",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 3,
   "author": "ForteScarlet",
   "background": {
