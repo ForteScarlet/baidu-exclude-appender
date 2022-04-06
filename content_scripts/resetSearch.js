@@ -15,13 +15,13 @@ function resetSearch(search, attributes) {
 
     const splits = search.trim().split(/ +/).map(it => it.trim()).filter(it => it.length > 0).reverse()
     let isInSearchValue = false
-    let searchValue = ''
+    let searchValueArray = []
     for (const splitValue of splits) {
         if (isInSearchValue) {
-            searchValue += ' ' + splitValue.trim()
+            searchValueArray.push(splitValue.trim())
         } else {
             if (!splitValue.startsWith('-')) {
-                searchValue = splitValue.trim()
+                searchValueArray.push(splitValue.trim())
                 isInSearchValue = true
             } else {
                 // find attribute
@@ -34,6 +34,7 @@ function resetSearch(search, attributes) {
     }
 
     const needAppendAttributesKeys = Object.keys(needAppendAttributes).reverse()
+    let searchValue = searchValueArray.reverse().join(' ')
     for (const value of needAppendAttributesKeys) {
         searchValue += ' -' + value
     }
