@@ -22,7 +22,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.baidu.com/s*"],
+      "matches": ["*://*.baidu.com/*"],
       "js": ["content_scripts/resetSearch.js", "content_scripts/search.js"]
     }
   ]

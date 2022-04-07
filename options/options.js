@@ -25,6 +25,7 @@ function excludeManage(excludes) {
  * 搜索预览事件绑定
  */
 function searchView(excludes) {
+    setSearchView(excludes)
     $('#searchViewValue').bind('input', () => {
         setSearchView(excludes)
     })
