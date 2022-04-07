@@ -9,7 +9,7 @@ function doListen() {
         if (searchInput) {
             searchInput.addEventListener('change', () => {
                 chrome.storage.sync.get(['excludes'], (res) => {
-                    searchInput.value = resetSearch(searchInput.value, res.excludes.map((it) => it.id) || [])
+                    searchInput.value = resetSearch(searchInput.value, res.excludes.map((it) => it.id).filter((it) => it.enable) || [])
                 })
             })
             console.debug('绑定change事件')

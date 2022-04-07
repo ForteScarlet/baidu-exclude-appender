@@ -37,12 +37,9 @@ function setSearchView(excludes) {
 }
 
 function getSearchView(excludes, value) {
-    const needExcludes = excludes.filter((it) => {
-        return it.enable
-    })
-        .map((it) => {
-            return it.id
-        })
+    const needExcludes = excludes
+        .filter((it) => it.enable)
+        .map((it) => it.id)
     return resetSearch(value, needExcludes)
 }
 //endregion
