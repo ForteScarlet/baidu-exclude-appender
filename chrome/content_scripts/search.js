@@ -9,13 +9,13 @@ function doListen() {
         if (searchInput) {
             searchInput.addEventListener('change', () => {
                 chrome.storage.sync.get(['excludes'], (res) => {
-                    searchInput.value = resetSearch(searchInput.value, res.excludes.map((it) => it.id).filter((it) => it.enable) || [])
+                    searchInput.value = resetSearch(searchInput.value, res.excludes.filter((it) => it.enable).map((it) => it.id) || [])
                 })
             })
             console.debug('绑定change事件')
             searchForm.addEventListener('submit', () => {
                 chrome.storage.sync.get(['excludes'], (res) => {
-                    searchInput.value = resetSearch(searchInput.value, res.excludes.map((it) => it.id) || [])
+                    searchInput.value = resetSearch(searchInput.value, res.excludes.filter((it) => it.enable).map((it) => it.id) || [])
                     searchForm.submit()
                 })
                 return false
