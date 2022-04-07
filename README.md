@@ -1,6 +1,7 @@
 # Baidu Exclude Appender
+[![](https://img.shields.io/chrome-web-store/v/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn?hl=zh-CN)
 
-在你进行百度搜索的时候，自动为你填充结尾处的排除参数，例如 `-csbn`。
+在你进行百度搜索的时候，自动为你填充结尾处的排除参数的谷歌浏览器插件。例如 `-csBn`。
 
 ## 使用
 ### 安装
