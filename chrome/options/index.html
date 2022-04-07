@@ -30,6 +30,9 @@
                     则会导致在结尾处拼接一个重复的 <code>-foo</code>，变成 <code>红烧肉 -foo 炸鸡块 -foo</code>。
                 </p>
             </li>
+            <li>不会移除任何其他参数。例如你的查询内容为 <code>红烧肉 -bar</code>，但是你在本插件中仅配置了 <code>foo</code>，那么查询内容会变成 <code>红烧肉 -bar -foo</code>。</li>
+            <li>不保证参数顺序。例如你的查询内容为 <code>红烧肉 -bar</code>，但是你在本插件中仅配置了 <code>foo</code>，那么查询内容<strong>可能</strong>会变成 <code>红烧肉 -bar -foo</code>，<strong>也可能</strong>会变成<code>红烧肉 -foo -bar</code>。</li>
+
         </ul>
     </div>
 
@@ -37,12 +40,18 @@
         <h1>配置</h1>
     </div>
 
+
     <div class="row">
-        <div class="input-group">
-            <span class="input-group-addon">搜索预览：</span>
-            <input id="searchViewValue" type="text" class="form-control" placeholder="View" value="今晚吃什么">
-            <input id="searchView" type="text" class="form-control" placeholder="View" readonly>
-        </div>
+        <form action="https://www.baidu.com/s" method="get">
+            <div class="input-group">
+                <span class="input-group-addon">搜索预览：</span>
+                <input id="searchViewValue" type="text" class="form-control" placeholder="搜索参数" value="今晚吃什么">
+                <input id="searchView" type="text" class="form-control" placeholder="搜索预览" name="wd" readonly>
+                <span class="input-group-addon">
+                    <button type="submit" class="btn btn-primary">百度搜索</button>
+                </span>
+            </div>
+        </form>
     </div>
     <br />
     <div class="row">
@@ -51,6 +60,7 @@
                 <input id="add-value" class="form-control" placeholder="添加排除值">
             </div>
             <button id="add-btn" class="btn btn-primary">添加</button>
+            <span id="searchViewTip" class="help-block"> <strong>不需要</strong> 添加 <code>-</code> 前缀。</span>
         </div>
     </div>
     <div class="row" style="padding-top: 40px"></div>
