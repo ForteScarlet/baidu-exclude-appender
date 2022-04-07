@@ -2,6 +2,10 @@
 [![](https://img.shields.io/chrome-web-store/v/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
 [![](https://img.shields.io/chrome-web-store/price/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
 
+[GitHub](https://github.com/ForteScarlet/baidu-exclude-appender) | [Gitee镜像](https://gitee.com/ForteScarlet/baidu-exclude-appender)
+
+<hr />
+
 在你进行百度搜索的时候，自动为你填充结尾处的排除参数的谷歌浏览器插件。例如 `-csBn`。
 
 ## 使用
