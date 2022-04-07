@@ -1,5 +1,6 @@
 # Baidu Exclude Appender
-[![](https://img.shields.io/chrome-web-store/v/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn?hl=zh-CN)
+[![](https://img.shields.io/chrome-web-store/v/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
+[![](https://img.shields.io/chrome-web-store/price/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
 
 在你进行百度搜索的时候，自动为你填充结尾处的排除参数的谷歌浏览器插件。例如 `-csBn`。
 
@@ -10,7 +11,7 @@
 安装插件到您的浏览器。
 
 #### 方式二 releases
-前往releases下载打包后的 `.crx` 文件并自行安装。
+前往 [releases](https://github.com/ForteScarlet/baidu-exclude-appender/releases) 下载打包后的 `.crx` 文件并自行安装。
 
 
 #### 方式三 使用源码
