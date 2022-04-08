@@ -60,10 +60,11 @@
 - 填充后可能需要在手动点击一次查询
 - 其他未知问题
 
+## 协助与反馈
+欢迎通过 [pr](https://github.com/ForteScarlet/baidu-exclude-appender/pulls) 贡献您的力量，非常感谢！
+
+如果您遇到什么问题或者有什么建议意见，可以通过 [issue](https://github.com/ForteScarlet/baidu-exclude-appender/issues) 进行反馈喔～
 
 ## 免责声明
 本插件仅供学习交流使用，请勿用于非法活动，开发者不承担任何责任。
 
-
-## 协助我
-欢迎通过 [pr](https://github.com/ForteScarlet/baidu-exclude-appender/pulls) 贡献您的力量，非常感谢！
