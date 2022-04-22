@@ -1,6 +1,9 @@
 # Baidu Exclude Appender
 [![](https://img.shields.io/chrome-web-store/v/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
+[![](https://img.shields.io/chrome-web-store/stars/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
+[![](https://img.shields.io/chrome-web-store/users/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
 [![](https://img.shields.io/chrome-web-store/price/fdanehilpddgjmmngflpecmmmgmkfjmn)](https://chrome.google.com/webstore/detail/baidu-exclude-appender/fdanehilpddgjmmngflpecmmmgmkfjmn)
+
 
 [GitHub](https://github.com/ForteScarlet/baidu-exclude-appender) | [Gitee镜像](https://gitee.com/ForteScarlet/baidu-exclude-appender)
 
